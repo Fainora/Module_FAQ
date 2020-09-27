@@ -2,6 +2,7 @@
 use yii\helpers\Url;
 
 $this->title = 'Админка'; 
+$this->params['breadcrumbs'][] = ['label' => 'Module FAQ', 'url' => ['/faq']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

@@ -7,6 +7,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <h1>FAQ</h1>
 
+<?php foreach($users as $user): ?>
+  <?php if($user->isAdmin == 1): ?>
+    <a href="/admin">Админка</a>
+  <?php endif; ?>
+<?php endforeach; ?>
+
 <?php if (!empty($categories)): ?>
   <?php if(count($categories) == 1): ?>
     <?php foreach($categories as $category): ?>
@@ -42,4 +48,3 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php endforeach; ?>
   <?php endif;?>
 <?php endif; ?>
-JS +VueJS

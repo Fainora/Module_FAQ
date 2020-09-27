@@ -5,6 +5,7 @@ namespace app\modules\faq\controllers;
 use yii\web\Controller;
 use app\modules\faq\models\Category;
 use app\modules\faq\models\Question;
+use app\models\User;
 
 class DefaultController extends Controller
 {
@@ -13,8 +14,9 @@ class DefaultController extends Controller
     {
         $categories = Category::find()->all();
         $questions = Question::find()->all();
+        $users = User::find()->all();
 
-        return $this->render('index', compact('categories','questions'));
+        return $this->render('index', compact('categories','questions','users'));
     }
 
     public function actionCategory($id)
